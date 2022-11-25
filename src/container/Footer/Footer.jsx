@@ -22,6 +22,7 @@ const Footer = () => {
 
   const handleSubmit = () => {
     setLoading(true);
+    setIsFormSubmitted(true);
 
     const contact = {
       _type: "contact",

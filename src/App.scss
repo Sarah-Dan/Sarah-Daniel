@@ -173,11 +173,11 @@
 
 @media screen and (max-width: 500px) {
   .app__navigation,
-  .app__social {
+  .app__social, .copyright {
     display: none;
   }
 
-  .copyright {
-    padding: 2rem;
-  }
+  // .copyright {
+  //   padding: 2rem;
+  // }
 }
