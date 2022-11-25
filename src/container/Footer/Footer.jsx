@@ -41,7 +41,7 @@ const Footer = () => {
 
   return (
     <>
-      <h2 className="head-text">Take a drink & chat with me</h2>
+      <h2 className="head-text">Have a drink & chat with me</h2>
 
       <div className="app__footer--cards">
         <div className="app__footer--card ">
@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {isFormSubmitted ? (
+      {!isFormSubmitted ? (
         <div className="app__footer--form app__flex">
           <div className="app__flex">
             <input
@@ -91,7 +91,7 @@ const Footer = () => {
             />
           </div>
           <button type="button" className="p__text" onClick={handleSubmit}>
-            {loading ? "Sending" : "Send Message"}
+            {!loading ? "Send Message" : "Sending..."}
           </button>
         </div>
       ) : (
