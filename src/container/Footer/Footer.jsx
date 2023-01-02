@@ -69,6 +69,7 @@ const Footer = () => {
               name="name"
               value={name}
               onChange={handleChangeInput}
+              required
             />
           </div>
           <div className="app__flex">
@@ -78,7 +79,8 @@ const Footer = () => {
               placeholder="Enter your email"
               name="email"
               value={email}
-              onChange={handleChangeInput}
+              onChange={handleChangeInput} required
+              
             />
           </div>
           <div>
@@ -89,12 +91,13 @@ const Footer = () => {
               value={message}
               name="message"
               onChange={handleChangeInput}
+              required
             />
           </div>
           <button type="button" className="p__text" onClick={handleSubmit}>
             {!loading ? "Send Message" : "Sending..."}
           </button>
-        </div>
+        </div> 
       ) : (
         <div>
           <p className="head__text">Thank you for getting in touch!🙏</p>

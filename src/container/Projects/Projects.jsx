@@ -10,14 +10,18 @@ const Projects = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [projects, setProjects] = useState([]);
   const [filterProjects, setFilterProjects] = useState([]);
+  const [page, setPage] = useState(1);
+  const [totalPages] = useState(5);
+
 
   useEffect(() => {
     const query = `*[_type == "projects"]`;
+    // display 3 projects per page
     client.fetch(query).then((data) => {
       setProjects(data);
       setFilterProjects(data);
     });
-  }, []);
+  }, [page]);
 
   const handleProjectFilter = (item) => {
     setActiveFilter(item);
@@ -40,6 +44,7 @@ const Projects = () => {
       <h2 className="head__text">
         My creative <span>Projects</span>
       </h2>
+      {/* filter projects by tags */}
       <div className="app__project--filter">
         {["UI/UX", "Web App", "Mobile App", "React JS", "All"].map(
           (item, index) => (
@@ -107,6 +112,44 @@ const Projects = () => {
           </div>
         ))}
       </motion.div>
+
+      {/* pagination */}
+      <div className="pagination">
+          {
+            <button
+              className="page__btn"
+              disabled={page <= 1}
+              onClick={() => setPage((prev) => prev - 1)}
+            >
+              Prev
+            </button>
+          }
+          {Array.from(Array(totalPages), (e, i) => {
+            return (
+              <button
+                className="pages__btn"
+                key={i}
+                onClick={() => setPage(i + 1)}
+              >
+                {i + 1}
+              </button>
+            );
+          })}
+          {
+            <button
+              className="page__btn"
+              disabled={page >= totalPages}
+              onClick={() => setPage((prev) => prev + 1)}
+            >
+              Next
+            </button>
+          }
+          <p className="paging">
+            {" "}
+            Page {page} of {totalPages}
+          </p>
+        </div>
+      
     </>
   );
 };

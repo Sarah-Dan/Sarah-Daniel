@@ -142,3 +142,47 @@
     top: -25px;
   }
 }
+
+.page__btn {
+  background-color: var(--secondary-color);
+  box-shadow: 0 0 25px rgba(61, 60, 63, 0.2);
+  color: white;
+  font-size: var(--font-small);
+  font-weight: var(--font-weight-light);
+  padding: 0.8rem;
+  margin: 0.2rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    background-color: var(--primary-color);
+    color: black;
+  }
+}
+
+.pages__btn {
+  border: 1px solid grey;
+  background-color: white;
+  color: black;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.6rem;
+  margin: 1rem 0.2rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+  }
+}
+
+.paging {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0;
+}
