@@ -2,6 +2,7 @@ import { images } from "../../constants";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import Resume from "../../assets/Resume.pdf";
 
 import "./navbar.scss";
 
@@ -23,8 +24,9 @@ const NavBar = () => {
         {/* resume download */}
         <li >
           <a 
-            id="resume" 
-            href="https://docs.google.com/document/d/1yznK8ti27iEXTrzL7LJvqE_3_mgLTerCRdoAbYHCKGE/edit?usp=sharing" 
+            id="resume"
+            href={Resume}
+            // href="https://docs.google.com/document/d/1yznK8ti27iEXTrzL7LJvqE_3_mgLTerCRdoAbYHCKGE/edit?usp=sharing" 
             target="_blank" 
             rel="noopener noreferrer"
             >
