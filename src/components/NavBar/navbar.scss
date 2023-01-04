@@ -117,10 +117,6 @@
       li {
         margin: 1rem;
 
-        // &:hover{
-
-        // }
-
         a {
           color: var(--gray-color);
           text-decoration: none;
@@ -130,7 +126,6 @@
 
           &:hover {
             color: var(--secondary-color);
-            // border-bottom: 4px solid red;
           }
         }
       }
@@ -143,4 +138,11 @@
   @media screen and (min-width: 900px) {
     display: none;
   }
+}
+
+#resume {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
 }

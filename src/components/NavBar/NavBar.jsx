@@ -14,13 +14,25 @@ const NavBar = () => {
         {/* Sarah Daniel */}
       </div>
       <ul className="app__navbar--links">
-        {["home", "about", "projects", "skills", "contact"].map((item, id) => (
+        {["home", "about", "projects", "skills", "contact" ].map((item, id) => (
           <li className="app__flex p-text" key={`link-${item}`}>
             <div />
             <a href={`#${item}`}>{item}</a>
           </li>
         ))}
+        {/* resume download */}
+        <li >
+          <a 
+            id="resume" 
+            href="https://docs.google.com/document/d/1yznK8ti27iEXTrzL7LJvqE_3_mgLTerCRdoAbYHCKGE/edit?usp=sharing" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            >
+              resume
+          </a>
+        </li>
       </ul>
+      
 
       <div className="app__navbar--menu">
         <HiMenuAlt4 onClick={() => setToggle(true)} />
@@ -32,7 +44,7 @@ const NavBar = () => {
           >
             <HiX onClick={() => setToggle(false)} />
             <ul>
-              {["home", "about", "skills", "projects", "contact"].map(
+              {["home", "about", "skills", "projects", "contact" ].map(
                 (item, id) => (
                   <li key={{ item }}>
                     <a href={`#${item}`} onClick={() => setToggle(false)}>
@@ -41,6 +53,16 @@ const NavBar = () => {
                   </li>
                 )
               )}
+              <li >
+          <a 
+            id="resume" 
+            href="https://docs.google.com/document/d/1yznK8ti27iEXTrzL7LJvqE_3_mgLTerCRdoAbYHCKGE/edit?usp=sharing" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            >
+              resume
+          </a>
+        </li>
             </ul>
           </motion.div>
         )}
